@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+   <h1>Register</h1> 
+   <form action="">
+    <div>
+        <label for="FirstName">First Name:</label>
+        <input type="text" placeholder="John" required>
+        <label for="LastName">Last Name:</label>
+        <input type="text" placeholder="Smith" required>
+    </div>
+    <div>
+        <label for="Male">Male</label>
+        <input type="radio" name="Gender" id="Male" value="Male">
+        <label for="Female">Female</label>
+        <input type="radio" name="Gender" id="Female" value="Female">
+        <label for="Other">Other</label>
+        <input type="radio" name="Gender" id="Other" value="Other">
+    </div>
+
+    <div>
+        <label for="Email">Email:</label>
+        <input type="email" name="Email" placeholder="your email" required>
+        <label for="Password">Password:</label>
+        <input type="password" placeholder="your password" pattern=".{5,10}" required title="5 to 10 characters">
+    </div>
+
+    <div>
+        Birthday:
+        <select name="Birthday" id="Month">
+            <option value="Jan">Jan</option>
+            <option value="Feb">Feb</option>
+            <option value="Mar">Mar</option>
+        </select>
+        <select name="Birthday" id="Day">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <select name="Birthday" id="Year">
+            <option value="1990">1990</option>
+            <option value="1991">1991</option>
+            <option value="1992">1992</option>
+        </select>
+    </div>
+    <div>
+        <label for="Agreed">I agree to the terms and conditions:</label>
+        <input type="checkbox" name="agreed" id="agreed">
+    </div>
+        <input type="submit" value="Submit">
+   </form>
+</body>
+</html>
