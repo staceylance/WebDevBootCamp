@@ -1,0 +1,26 @@
+li {
+    border: red solid 2px;
+}
+
+#special {
+    background: yellow;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+/* 
+Order of magnitude of specificity, from least to most specific
+Type Selectors:
+    li {
+
+    }
+
+Class, attribute, psuedo-class selectors:
+    .hello {}
+    input[type="text"]{}
+    align-self: hover;
+    input:checked
+
+ID Selectors
+#special{} */
