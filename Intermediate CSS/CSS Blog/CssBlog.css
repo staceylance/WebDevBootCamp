@@ -1,0 +1,31 @@
+#BlogBody{
+    max-width: 700px;
+    width: 80%;
+    border: 20px solid #bdc3c7;
+    margin: auto;
+}
+
+.post {
+    margin: 15px;
+    text-align: left;
+}
+
+.FirstParagraph {
+    padding-left: 3px;
+    margin-left: 30px;
+    border-left: 5px solid #bdc3c7;
+}
+h4 {
+    color: rgb(11, 129, 158);
+}
+
+h2 {
+    color: rgb(11, 6, 46);
+}
+
+hr {
+    color: #bdc3c7;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
