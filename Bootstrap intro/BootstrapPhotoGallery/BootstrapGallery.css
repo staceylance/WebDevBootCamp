@@ -2,3 +2,7 @@
     font-weight: bold;
     color: rgb(1, 1, 75);
 }
+
+body {
+    padding-top: 70px;
+}
