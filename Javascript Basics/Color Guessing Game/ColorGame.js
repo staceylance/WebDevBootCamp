@@ -14,7 +14,7 @@ var SquaresLength = 6;
 function Randomize (colors, SquaresLength){
 //Creates randomized colors for color array
     var Red = 0, Blue = 0, Green = 0;
-    for (let i = 0; i < SquaresLength+1; i++) {
+    for (let i = 0; i < SquaresLength; i++) {
         Red = Math.floor(Math.random() * 256);
         Blue = Math.floor(Math.random() * 256);
         Green = Math.floor(Math.random() * 256);
