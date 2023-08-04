@@ -27,10 +27,15 @@ function Update(squares, colors){
         squares[i].style.backgroundColor = colors[i];
         squares[i].addEventListener("click", function(){
             var clickedColor = this.style.backgroundColor;
-            if(clickedColor == WinningRgb){
-                alert("Correct!");
+            if(clickedColor === WinningRgb){
+                for (let j = 0; j < squares.length; j++) {
+                    squares[j].style.backgroundColor = WinningRgb;
+                    h1.style.backgroundColor = WinningRgb;
+                };
+                MessageDisplay.textContent = "Correct!";
             } else {
-                alert("Wrong!");
+                this.style.backgroundColor = "#232323";
+                MessageDisplay.textContent = "Try Again";
             };
         })};
     document.getElementById("WinningRgb").textContent = WinningRgb;
@@ -39,6 +44,11 @@ function Update(squares, colors){
 
 //Dom Manipulation Call
 var squares = document.querySelectorAll(".square");
+var MessageDisplay = document.querySelector("#Message");
+var h1 = document.querySelector("h1");
+var Reset = document.querySelector("#Reset");
+var Easy = document.querySelector("#Easy");
+var Hard = document.querySelector("#Hard");
 
 Randomize(colors, 6);
 Update(squares, colors);
