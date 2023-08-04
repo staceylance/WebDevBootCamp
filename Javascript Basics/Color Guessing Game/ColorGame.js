@@ -38,10 +38,10 @@ function Update(squares, colors){
         ResetAll(colors, SquaresLength);
     });
     Easy.addEventListener("click", function() {
-        EasyMode();
+        EasyMode(colors, SquaresLength);
     });
     Hard.addEventListener("click", function(){
-        HardMode();
+        HardMode(colors, SquaresLength);
     });
 };
 
@@ -61,10 +61,20 @@ function ColorCheck(clickedColor, WinningRgb, clickedObject){
 
 function ResetAll(colors, SquaresLength){
 //Resets colors and backgrounds;
-Randomize(colors, SquaresLength);
-Update(squares, colors);
-h1.style.backgroundColor = "#232323";
-MessageDisplay.textContent="";
+    Randomize(colors, SquaresLength);
+    Update(squares, colors);
+    h1.style.backgroundColor = "#232323";
+    MessageDisplay.textContent="";
+}
+
+function HardMode(colors, SquaresLength) {
+    SquaresLength = 6;
+    ResetAll(colors, SquaresLength);
+}
+
+function EasyMode(colors, SquaresLength){
+    SquaresLength = 3;
+    ResetAll(colors, SquaresLength);
 }
 
 //Dom Manipulation Call
@@ -74,6 +84,8 @@ var h1 = document.querySelector("h1");
 var Reset = document.querySelector("#Reset");
 var Easy = document.querySelector("#Easy");
 var Hard = document.querySelector("#Hard");
+var playingDiv = document.querySelector(".container");
+var PlaySpaces = playingDiv.querySelectorAll("div");
 
 Randomize(colors, 6);
 Update(squares, colors);
