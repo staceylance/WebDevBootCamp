@@ -9,11 +9,12 @@ var colors = [
     "rgb(0, 255, 0)"
 ];
 var WinningRgb = "rgb(0, 0, 0)";
+var SquaresLength = 6;
 
 function Randomize (colors, SquaresLength){
 //Creates randomized colors for color array
     var Red = 0, Blue = 0, Green = 0;
-    for (let i = 0; i < SquaresLength; i++) {
+    for (let i = 0; i < SquaresLength+1; i++) {
         Red = Math.floor(Math.random() * 256);
         Blue = Math.floor(Math.random() * 256);
         Green = Math.floor(Math.random() * 256);
@@ -34,7 +35,7 @@ function Update(squares, colors){
         })};
     document.getElementById("WinningRgb").textContent = WinningRgb;
     Reset.addEventListener("click", function(){
-        ResetAll(colors, 6);
+        ResetAll(colors, SquaresLength);
     });
     Easy.addEventListener("click", function() {
         EasyMode();
