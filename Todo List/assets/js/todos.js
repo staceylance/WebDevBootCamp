@@ -13,7 +13,12 @@ $("ul").on("click", "span", function(){
 
 // Add new Todo
 $("#NewTodo").on("change", function(){
-    var NewLi = "<li><span><i class='fa-solid fa-trash-can'></i><span>" + $(this).val() + "</li>";
+    var NewLi = "<li> <span><i class='fa-solid fa-trash-can'></i></span>" + " " + $(this).val() + "</li>";
     $(this).val("");
     $("ul").append(NewLi);
 });
+
+// Fades out input field when clicking + sign
+$(".fa-plus").click(function(){
+    $("#NewTodo").fadeToggle();
+})
