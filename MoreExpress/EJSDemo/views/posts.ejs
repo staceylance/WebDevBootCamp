@@ -1,3 +1,8 @@
+<%- include('partials/header') %>
+
+<% // We link to external stylesheet instead of forcing style on page %>
+<link rel="stylesheet" href="posts.css">
+
 <h1>The Posts Page</h1>
 
 <ul>
@@ -5,3 +10,5 @@
     <li> <%= posts[i].title %> - <%= posts[i].author %></li>
 <% } %>
 </ul>
+
+<%- include('partials/footer') %>
