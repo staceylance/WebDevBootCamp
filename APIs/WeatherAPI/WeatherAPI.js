@@ -12,3 +12,4 @@ if (CurrentCondition.FeelsLikeF == CurrentCondition.temp_F) {
 };
 console.log(temperatureString);
 console.log("Temperatures taken at " + CurrentCondition.observation_time);
+//comment for testing
