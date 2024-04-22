@@ -1,0 +1,12 @@
+{
+  "name": "weatherapi",
+  "version": "1.0.0",
+  "description": "Quick response for weather in an area to demo json handling",
+  "main": "WeatherAPI.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stacey Lance",
+  "license": "ISC", 
+  "type": "module"
+}
