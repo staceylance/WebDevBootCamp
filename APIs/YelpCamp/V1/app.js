@@ -1,9 +1,11 @@
 //dependencies and setup
 var express = require("express");
 var app = express();
+var bodyParser = require("body-parser");
 
 //default settings
 app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({extended: true}));
 
 //pages
 app.get("/", function(req,res){
@@ -12,6 +14,10 @@ app.get("/", function(req,res){
 
 app.get("/campgrounds", function(req,res){
     res.render("campgrounds")
+});
+
+app.get("/campgrounds/new", function(req,res){
+   res.render("new") 
 });
 
 app.post("/campgrounds", function(req,res){
