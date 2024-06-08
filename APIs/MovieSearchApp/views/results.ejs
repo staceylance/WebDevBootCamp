@@ -1,6 +1,9 @@
 <h1>Results page</h1>
 
-<% for (let i = 0; i < data.length; i++){%>
-    <li><%= data[i].Title%></li>
-
-<%}%>
+<ul>
+    <% for (let i = 0; i < data.length; i++){%>
+        <li><strong><%= data[i].Title%></strong> 
+        - <%= data[i].Year %>
+        </li>
+    <%}%>
+</ul>
