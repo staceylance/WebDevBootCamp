@@ -1,17 +1,28 @@
-<% include('partials/header') %>
+<%- include('partials/header') %>
 
-<div class="mt-4 p-5 bg-primary text-white rounded">
-    <h4>Campgrounds</h4>
-</div>
+<header class="p-5 mb-4 bg-body-tertiary rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5">Welcome to YelpCamp!</h1>
+        <p class="col-md-8 fs-4">View our handpicked campgrounds from around the world!</p>
+        <p><a class="btn btn-primary btn-lg" href="/campgrounds/new">Add New Campground </a></p>
+      </div>
+</header>
 
-
-<a href="/campgrounds/new">Add a new campground!</a>
-
-<% campgrounds.forEach(function(campground){ %>
-    <div>
-        <h4><%= campground.name %></h4>  
-        <img src="<%= campground.image %>">
+<div class="container">
+    <div class = "row text-center" style= "display:flex; flex-wrap: wrap;">
+        <% campgrounds.forEach(function(campground){ %>
+            <!--<div class="col-md-3 col-sm-6">-->
+            <!--    <img src="<%= campground.image%>" alt="" class="img-thumbnail">-->
+            <!--    <div class="caption"><%=campground.name%></div>-->
+            <!--</div>-->
+            <div class="col-md-3 col-sm-6">
+                <figure class="figure">
+                  <img src="<%= campground.image %>" class="figure-img img-fluid rounded" alt="Image of <%=campground.name%>">
+                  <figcaption class="figure-caption"><%=campground.name%></figcaption>
+                </figure>
+            </div>
+        <% }); %>
     </div>
-<% }); %>
-
-<% include('partials/footer') %>
+</div>    
+    
+<%- include('partials/footer') %>

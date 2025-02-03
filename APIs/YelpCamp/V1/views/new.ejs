@@ -1,14 +1,20 @@
-<% include('partials/header') %>
+<%- include('partials/header') %>
+<div class="container">
+    <div class="row">
+    <h1 class="d-flex justify-content-center mb-4">Add a New Campground!</h1>
+        <div style="width:30%; margin:0 auto">
+        <form action="/campgrounds" method="POST">
+            <input class="form-control mb-3" type="text" name="name" placeholder="Name">
+            <input class="form-control mb-3" type="text" name="image" placeholder="Image url">
+            <div class="d-grid">
+                <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+            </div>
+        </form>
+        <a class="btn btn-sm btn-outline-secondary col-6 mt-1" href='/campgrounds'>Go Back</a></button>
+        </div>
+    </div>
+    
+    
+</div>
 
-<header class="mt-4 p-5 bg-primary text-white rounded">
-    <h4>Add a New Campground!</h4>
-</header>
-
-<form action="/campgrounds" method="POST">
-    <input type="text" name="name" placeholder="name">
-    <input type="text" name="image" placeholder="image url">
-    <button>Submit!</button>
-</form>
-
-<a href='/campgrounds'>Nevermind, return me to the campgrounds</a>
-<% include('partials/footer') %>
+<%- include('partials/footer') %>
